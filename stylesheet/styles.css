@@ -1,0 +1,148 @@
+h1 {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.05em;
+}
+
+p {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+li {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+body {
+    background-color: #F1F2F6;
+}
+
+.wrapper {
+    max-width: 700px;
+    margin: 60px auto auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.title {
+    margin-bottom: 40px;
+}
+
+.title h1 {
+    margin-bottom: 20px;
+}
+
+.question {
+    margin-bottom: 30px;
+}
+
+.question h2 {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.item {
+    cursor: pointer;
+    padding-left: 20px;
+    background-color: white;
+    flex: 1;
+}
+
+.selected {
+    background-color: rgba(243, 59, 40, 0.95);
+    color: white;
+}
+
+.hover {
+    background-color: #F2D0CF;
+    color: white;
+}
+
+.item p {
+    background-image: url(../static/img/bullet.png);
+    background-repeat: no-repeat;
+    padding-left: 22px;
+}
+
+.selected p {
+    background-image: url(../static/img/bullet_selected.png);
+}
+
+.hover p {
+    background-image: url(../static/img/bullet_selected.png);
+}
+
+.output {
+    margin-top: 50px;
+}
+
+.output h2 {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 20px;
+}
+
+.output-content {
+    display: flex;
+    background-color: white;
+    padding: 25px;
+
+    font-family: Helvetica;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration-line: underline;
+
+    color: #F34433;
+}
+
+.find-another-package {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.find-another-package h3 {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.find-another-package-button {
+    cursor: pointer;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 220px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    padding-left: 25px;
+    align-items: center;
+    justify-content: center;
+}

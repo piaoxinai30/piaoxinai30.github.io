@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="stylesheet/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="static/scripts.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="title">
+            <h1>INSTALL PYTORCH</h1>
+            <p>To find the optimized install package, please follow quick questions upon your usage.</p>
+        </div>
+        <div class="question">
+            <p>
+                Q 1. What purpose do you want to use PyTorch?
+            </p>
+            <div class="options">
+                <div class="item q1" id="research">
+                    <p>Research</p>
+                </div>
+                <div class="item q1" id="production">
+                    <p>Production</p>
+                </div>
+                <div class="item q1" id="other">
+                    <p>Other</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- If the user selected research or production -->
+        <div class="research_or_production hidden">
+            <div class="question question2" id="question2-rp">
+                <p>
+                    Q 2. What OS do you use?
+                </p>
+                <div class="options">
+                    <div class="item rp-item q2-rp" id="linux">
+                        <p>Linux</p>
+                    </div>
+                    <div class="item rp-item q2-rp" id="mac">
+                        <p>Mac</p>
+                    </div>
+                    <div class="item rp-item q2-rp" id="windows">
+                        <p>Windows</p>
+                    </div>
+                </div>
+            </div>
+            <div class="question question3 hidden" id="question3-rp">
+                <p>
+                    Q 3. Which compute platform do you have?
+                </p>
+                <div class="options">
+                    <div class="item rp-item q3-rp" id="CUDA_102">
+                        <p>CUDA 10.2</p>
+                    </div>
+                    <div class="item rp-item q3-rp" id="CUDA_113">
+                        <p>CUDA 11.3</p>
+                    </div>
+                    <div class="item rp-item q3-rp" id="ROCM_4">
+                        <p>ROCM 4.2</p>
+                    </div>
+                    <div class="item rp-item q3-rp" id="CPU">
+                        <p>CPU</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question question4 hidden" id="question4-rp">
+                <p>
+                    Q 4. Select package manager.
+                </p>
+                <h2>
+                    Anaconda is our recommended package manager since it installs all dependencies.
+                </h2>
+                <div class="options">
+                    <div class="item rp-item q4-rp" id="conda">
+                        <p>Conda</p>
+                    </div>
+                    <div class="item rp-item q4-rp" id="pip">
+                        <p>Pip</p>
+                    </div>
+                    <div class="item rp-item q4-rp" id="libtorch">
+                        <p>LibTorch</p>
+                    </div>
+                    <div class="item rp-item q4-rp" id="source">
+                        <p>Source</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="others hidden">
+            <div class="question question2" id="question2-o">
+                <p>
+                    Q 2. What PyTorch Build do you prefer to use?
+                </p>
+                <h2>
+                    Stable represents the most currently tested and supported version of PyTorch. This should be
+                    suitable for many users. Preview is available if you want the latest, not fully tested and
+                    supported, 1.11 builds that are generated nightly. </h2>
+                <div class="options">
+                    <div class="item o-item q2-o" id="research">
+                        <p>Stable (1.10.1)</p>
+                    </div>
+                    <div class="item o-item q2-o" id="nightly">
+                        <p>Preview (Nightly)</p>
+                    </div>
+                    <div class="item o-item q2-o" id="production">
+                        <p>LTS (1.8.2)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question question3 hidden" id="question3-o">
+                <p>
+                    Q 3. What OS do you use?
+                </p>
+                <div class="options">
+                    <div class="item o-item q3-o" id="linux">
+                        <p>Linux</p>
+                    </div>
+                    <div class="item o-item q3-o" id="mac">
+                        <p>Mac</p>
+                    </div>
+                    <div class="item o-item q3-o" id="windows">
+                        <p>Windows</p>
+                    </div>
+                </div>
+            </div>
+            <div class="question question4 hidden" id="question4-o">
+                <p>
+                    Q 4. Which compute platform do you have?
+                </p>
+                <div class="options">
+                    <div class="item o-item q4-o" id="CUDA_102">
+                        <p>CUDA 10.2</p>
+                    </div>
+                    <div class="item o-item q4-o" id="CUDA_113">
+                        <p>CUDA 11.3</p>
+                    </div>
+                    <div class="item o-item q4-o" id="ROCM_42">
+                        <p>ROCM 4.2</p>
+                    </div>
+                    <div class="item o-item q4-o" id="CPU">
+                        <p>CPU</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question question5 hidden" id="question5-o">
+                <p>
+                    Q 5. Select package manager.
+                </p>
+                <h2>
+                    Anaconda is our recommended package manager since it installs all dependencies.
+                </h2>
+                <div class="options">
+                    <div class="item o-item q5-o" id="conda">
+                        <p>Conda</p>
+                    </div>
+                    <div class="item o-item q5-o" id="pip">
+                        <p>Pip</p>
+                    </div>
+                    <div class="item o-item q5-o" id="libtorch">
+                        <p>LibTorch</p>
+                    </div>
+                    <div class="item o-item q5-o" id="source">
+                        <p>Source</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="output hidden">
+            <h2>
+                This is the suggested download package for you.
+            </h2>
+            <div class="output-content">
+                <p>
+                    conda install pytorch torchvision torchaudio cpuonly -c pytorch-lts
+                    Note: Additional support for these binaries may be provided by PyTorch Enterprise Support Program
+                    Participants.
+                </p>
+            </div>
+            <div class="find-another-package">
+                <div class="find-another-package-button">
+                    <p>
+                        Find another package 
+                    </p>
+                    <img src="static/img/caret_right.png" alt="right">    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
